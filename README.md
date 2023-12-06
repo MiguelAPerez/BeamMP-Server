@@ -162,6 +162,8 @@ brew install curl zlib git make
 
 ### How to build
 
+#### Manual
+
 On Windows, use git-bash for these commands. On Linux, these should work in your shell.
 
 1. Make sure you have all [prerequisites](#prerequisites) installed
@@ -173,6 +175,17 @@ On Windows, use git-bash for these commands. On Linux, these should work in your
 8. You now have a `BeamMP-Server` file in your directory, which is executable with `./BeamMP-Server` (`.\BeamMP-Server.exe` for windows). Follow the (Windows or Linux, doesnt matter) instructions on the [wiki](https://wiki.beammp.com/en/home/server-installation) for further setup after installation (which we just did), such as port-forwarding and getting a key to actually run the server.
 
 *tip: to run the server in the background, simply (in bash, zsh, etc) run:* `nohup ./BeamMP-Server &`*.*
+
+#### Docker
+To build the ubuntu container run the following command:
+```
+docker compose build
+```
+
+To run the container:
+```
+docker compose up -d
+```
 
 ## Support
 The BeamMP project is supported by community donations via our [Patreon](https://www.patreon.com/BeamMP). This brings perks such as Patreon-only channels on our Discord, early access to new updates, and more server keys. 
