@@ -1,0 +1,11 @@
+version: '3'
+services:
+  beammp:
+    container_name: 'beammp'
+    build: .
+    tty: true
+    ports:
+      - '30814:30814'
+      - '30815:30815'
+    volumes:
+      - ./ServerConfig.toml:/root/ServerConfig.toml
